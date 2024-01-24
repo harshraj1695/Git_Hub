@@ -1,7 +1,6 @@
-// C program to implement linear search using loops
+
 #include <stdio.h>
 
-// linear search function that searches the key in arr
 int linearSearch(int* arr, int size, int key)
 {
 	// starting traversal
@@ -14,7 +13,7 @@ int linearSearch(int* arr, int size, int key)
 	return -1;
 }
 
-// Driver code
+
 int main()
 {
 	int arr[10] = { 3, 4, 1, 7, 5, 8, 11, 42, 3, 13 };
