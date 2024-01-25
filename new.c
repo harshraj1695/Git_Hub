@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 // Function to partition the array and return the index of the pivot
-int partition(int arr[], int low, int high) {
+int partition(int arr[], int l, int high) {
     int pivot = arr[high];
     int i = low - 1;
 
-    for (int j = low; j < high; j++) {
+    for (int j = l; j < high; j++) {
         if (arr[j] < pivot) {
             i++;
             // Swap arr[i] and arr[j]
@@ -24,13 +24,13 @@ int partition(int arr[], int low, int high) {
 }
 
 // Function to perform Quick Sort recursively
-void quickSort(int arr[], int low, int high) {
-    if (low < high) {
+void quickSort(int arr[], int l, int high) {
+    if (l < high) {
         // Find the partitioning index
-        int pivotIndex = partition(arr, low, high);
+        int pivotIndex = partition(arr, l, high);
 
         // Recursively sort the subarrays
-        quickSort(arr, low, pivotIndex - 1);
+        quickSort(arr, l, pivotIndex - 1);
         quickSort(arr, pivotIndex + 1, high);
     }
 }
